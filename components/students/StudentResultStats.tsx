@@ -12,6 +12,14 @@ function diplomasCountLabel(n: number): string {
   return `${n} дипломов`
 }
 
+function coursesCountLabel(n: number): string {
+  const m10 = n % 10
+  const m100 = n % 100
+  if (m10 === 1 && m100 !== 11) return `${n} студент`
+  if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return `${n} студента`
+  return `${n} студентов`
+}
+
 const cardVariants = {
   first: {
     ring: "ring-1 ring-primary/25",
@@ -53,6 +61,7 @@ export function StudentResultStats() {
     first: tally.first,
     second: tally.second,
     third: tally.third,
+    courses: 107,
   }
 
   return (
@@ -60,6 +69,10 @@ export function StudentResultStats() {
       {studentResults.map((item) => {
         const placeCount = countById[item.id]
         const showTally = placeCount !== undefined
+        const tallyCaption =
+          item.id === "courses"
+            ? `${coursesCountLabel(placeCount)} в образовательных программах`
+            : `${diplomasCountLabel(placeCount)} по документам ниже`
         const v =
           item.id === "first"
             ? cardVariants.first
@@ -128,8 +141,8 @@ export function StudentResultStats() {
                     >
                       {placeCount}
                     </p>
-                    <p className="mt-1.5 max-w-[20ch] text-[11px] leading-snug text-muted-foreground sm:text-xs">
-                      {diplomasCountLabel(placeCount)} по документам ниже
+                    <p className="mt-1.5 max-w-[24ch] text-[11px] leading-snug text-muted-foreground sm:text-xs">
+                      {tallyCaption}
                     </p>
                   </div>
                 ) : (

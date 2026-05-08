@@ -21,7 +21,7 @@ export function ContactForm() {
   const [sent, setSent] = useState(false)
 
   return (
-    <GlassCard interactive={false} className="border-white/7 p-5 sm:p-6">
+    <GlassCard interactive={false} className="border-white/10 bg-surface/32 p-5 sm:p-6">
       <h2 className="text-lg font-semibold tracking-tight text-foreground">Сообщение</h2>
       <p className="muted-text mt-2 text-sm">
         Заполните поля — проверка на стороне браузера. Отправка на сервер пока не подключена.
@@ -94,7 +94,7 @@ export function ContactForm() {
             <p className="mt-1 text-xs text-muted-foreground">Минимум 20 символов.</p>
           </div>
           <Button type="submit" className="w-full sm:w-auto">
-            Send message
+            Отправить сообщение
           </Button>
         </form>
       )}

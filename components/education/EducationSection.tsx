@@ -10,11 +10,16 @@ type EducationSectionProps = {
 
 export function EducationSection({ title, subtitle, entries }: EducationSectionProps) {
   return (
-    <section className="scroll-mt-8">
-      <div className="border-b border-white/6 pb-4">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">{title}</h2>
+    <section className="relative scroll-mt-8">
+      <div
+        className="absolute -left-4 top-0 hidden h-24 w-px bg-linear-to-b from-primary/55 via-primary/15 to-transparent sm:block lg:-left-6"
+        aria-hidden
+      />
+      <div className="border-b border-white/8 pb-4">
+        <p className="section-eyebrow mb-0">Раздел</p>
+        <h2 className="mt-2 text-lg font-semibold tracking-tight text-foreground sm:mt-3 sm:text-xl">{title}</h2>
         {subtitle ? (
-          <p className="muted-text mt-2 max-w-3xl text-sm sm:text-base">{subtitle}</p>
+          <p className="muted-text mt-3 max-w-3xl text-sm sm:text-base">{subtitle}</p>
         ) : null}
       </div>
 

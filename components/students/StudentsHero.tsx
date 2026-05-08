@@ -15,7 +15,7 @@ export function StudentsHero() {
 
       <div
         className={cn(
-          "relative mt-8 max-w-3xl overflow-hidden rounded-2xl border border-white/10",
+          "relative mt-8 max-w-5xl overflow-hidden rounded-2xl border border-white/10",
           "bg-linear-to-br from-surface/80 via-surface/45 to-surface/25",
           "p-6 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.07),0_1px_0_0_oklch(1_0_0_/0.04)_inset]",
           "backdrop-blur-xl sm:mt-10 sm:p-7"
@@ -29,7 +29,7 @@ export function StudentsHero() {
           className="pointer-events-none absolute -bottom-16 -left-10 size-40 rounded-full bg-accent-2/10 blur-3xl sm:size-48"
           aria-hidden
         />
-        <p className="relative text-pretty text-base leading-[1.7] text-foreground/88 sm:text-lg sm:leading-[1.65]">
+        <p className="relative max-w-none text-pretty text-base leading-[1.7] text-foreground/88 sm:text-lg sm:leading-[1.65]">
           {studentsIntro}
         </p>
       </div>

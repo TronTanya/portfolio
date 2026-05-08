@@ -15,7 +15,14 @@ export const metadata: Metadata = pageMetadata({
 
 export default function EducationPage() {
   return (
-    <Section eyebrow="Академия" title="Образование" description={educationIntro}>
+    <Section
+      eyebrow="Академия"
+      title="Образование"
+      contentClassName="max-w-5xl"
+    >
+      <p className="muted-text mb-10 max-w-5xl text-pretty text-base leading-relaxed sm:mb-12 sm:text-lg">
+        {educationIntro}
+      </p>
       <div className="flex flex-col gap-14 sm:gap-16 lg:gap-20">
         {educationSections.map((block) => (
           <EducationSection

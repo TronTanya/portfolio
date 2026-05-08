@@ -16,7 +16,7 @@ import { ProjectField } from "./project-fields"
 export function FeaturedProjectCard({ project }: { project: Project }) {
   return (
     <article>
-      <GlassCard className="overflow-hidden p-0 sm:p-0">
+      <GlassCard className="overflow-hidden border-white/10 bg-surface/30 p-0 sm:p-0">
         <div className="relative overflow-hidden border-b border-white/6 bg-linear-to-br from-primary/8 via-transparent to-accent-2/6 px-5 py-5 sm:px-8 sm:py-6">
           {isGlass3DEnabled() && project.id === "drivee-analytics" ? (
             <div className="pointer-events-none absolute right-3 top-3 z-0 sm:right-5 sm:top-5">
@@ -42,10 +42,18 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
 
         <div className="grid gap-8 px-5 py-6 sm:px-8 sm:py-8 lg:grid-cols-[1fr_1.05fr] lg:gap-10">
           <div className="space-y-6">
-            <ProjectField label="Проблема">{project.problem}</ProjectField>
-            <ProjectField label="Решение">{project.solution}</ProjectField>
-            <ProjectField label="Моя роль">{project.role}</ProjectField>
-            <ProjectField label="Результат">{project.result}</ProjectField>
+            <div className="rounded-2xl border border-white/8 bg-surface/24 p-4 sm:p-5">
+              <ProjectField label="Проблема">{project.problem}</ProjectField>
+            </div>
+            <div className="rounded-2xl border border-white/8 bg-surface/24 p-4 sm:p-5">
+              <ProjectField label="Решение">{project.solution}</ProjectField>
+            </div>
+            <div className="rounded-2xl border border-white/8 bg-surface/24 p-4 sm:p-5">
+              <ProjectField label="Моя роль">{project.role}</ProjectField>
+            </div>
+            <div className="rounded-2xl border border-white/8 bg-surface/24 p-4 sm:p-5">
+              <ProjectField label="Результат">{project.result}</ProjectField>
+            </div>
           </div>
 
           <div className="space-y-6">
@@ -73,7 +81,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
                   {project.functions.map((f) => (
                     <li
                       key={f}
-                      className="flex items-center gap-2 rounded-lg border border-white/6 bg-surface/40 px-2.5 py-1.5 text-xs text-foreground/90"
+                      className="flex items-center gap-2 rounded-lg border border-white/8 bg-surface/45 px-2.5 py-1.5 text-xs text-foreground/90"
                     >
                       <span className="size-1 shrink-0 rounded-full bg-primary/80" aria-hidden />
                       {f}

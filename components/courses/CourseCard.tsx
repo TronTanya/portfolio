@@ -20,7 +20,7 @@ const statusStyles: Record<CourseStatus, string> = {
 export function CourseCard({ course }: { course: Course }) {
   return (
     <article>
-      <GlassCard className="flex h-full flex-col p-5 sm:p-6">
+      <GlassCard className="flex h-full flex-col border-white/10 bg-surface/32 p-5 sm:p-6">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <TechBadge variant="outline" className="normal-case tracking-normal">
             {courseCategoryLabels[course.category]}
@@ -44,7 +44,7 @@ export function CourseCard({ course }: { course: Course }) {
 
         <p className="muted-text mt-3 flex-1 text-sm leading-relaxed">{course.description}</p>
 
-        <div className="mt-4">
+        <div className="mt-4 rounded-xl border border-white/8 bg-surface/26 p-3.5">
           <p className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
             Навыки
           </p>

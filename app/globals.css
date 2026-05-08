@@ -308,12 +308,37 @@
   .muted-text {
     @apply text-muted-foreground leading-relaxed;
   }
+
+  .hero-card-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: -120% auto -120% -35%;
+    width: 30%;
+    pointer-events: none;
+    transform: rotate(18deg);
+    background: linear-gradient(
+      to right,
+      transparent,
+      color-mix(in oklch, var(--primary) 10%, transparent),
+      transparent
+    );
+    opacity: 0.42;
+    animation: hero-shimmer 6.2s ease-in-out infinite;
+  }
+
+  .floating-stat {
+    animation: float-3d-soft 4.4s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .floating-3d {
     animation: none !important;
     will-change: auto;
+  }
+  .floating-stat,
+  .hero-card-shimmer::after {
+    animation: none !important;
   }
 }
 
@@ -324,5 +349,15 @@
   }
   50% {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes hero-shimmer {
+  0% {
+    left: -40%;
+  }
+  52%,
+  100% {
+    left: 125%;
   }
 }

@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 
 export function EducationCard({ entry }: { entry: EducationEntry }) {
   return (
-    <GlassCard interactive={false} className="border-white/7 p-5 sm:p-6">
+    <GlassCard interactive={false} className="border-white/10 bg-surface/32 p-5 sm:p-6">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/6 pb-3">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-foreground/80">
           {credentialTypeLabels[entry.type]}
@@ -76,11 +76,11 @@ export function EducationCard({ entry }: { entry: EducationEntry }) {
         </div>
       ) : null}
 
-      <p className="muted-text mt-4 border-l-2 border-primary/25 pl-3 text-sm leading-relaxed">
+      <p className="muted-text mt-4 rounded-r-lg border-l-2 border-primary/28 bg-primary/4 py-0.5 pl-3 text-sm leading-relaxed">
         {entry.description}
       </p>
 
-      <div className="mt-5">
+      <div className="mt-5 rounded-xl border border-white/8 bg-surface/24 p-3.5">
         <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
           Ключевые темы
         </p>
@@ -94,7 +94,7 @@ export function EducationCard({ entry }: { entry: EducationEntry }) {
         </ul>
       </div>
 
-      <div className="mt-5 border-t border-white/6 pt-4">
+      <div className="mt-5 border-t border-white/8 pt-4">
         <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
           Навыки
         </p>
