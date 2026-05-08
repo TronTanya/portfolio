@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard"
 export function EducationImpact() {
   return (
     <section className="mt-14 scroll-mt-8 sm:mt-16">
-      <div className="border-b border-white/[0.06] pb-4">
+      <div className="border-b border-white/6 pb-4">
         <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">
           {educationImpactTitle}
         </h2>
@@ -13,7 +13,7 @@ export function EducationImpact() {
         </p>
       </div>
 
-      <GlassCard interactive={false} className="mt-6 border-white/[0.07] p-5 sm:mt-8 sm:p-8">
+      <GlassCard interactive={false} className="mt-6 border-white/7 p-5 sm:mt-8 sm:p-8">
         <ol className="grid gap-4 sm:grid-cols-2 lg:gap-5">
           {educationImpactItems.map((item, i) => (
             <li

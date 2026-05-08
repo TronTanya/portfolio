@@ -36,7 +36,7 @@ export function FocusAreas({ className }: { className?: string }) {
   return (
     <section className={cn("relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24", className)}>
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/8 to-transparent"
         aria-hidden
       />
       <motion.div
@@ -65,7 +65,7 @@ export function FocusAreas({ className }: { className?: string }) {
             <motion.li key={area.title} variants={card}>
               <div className="glass-panel glass-panel-feature h-full rounded-2xl p-5 sm:p-6">
                 <div className="flex items-start gap-3">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/[0.08] text-primary shadow-[0_0_24px_-8px_color-mix(in_oklch,var(--primary)_28%,transparent)]">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/8 text-primary shadow-[0_0_24px_-8px_color-mix(in_oklch,var(--primary)_28%,transparent)]">
                     <Icon className="size-5" aria-hidden />
                   </span>
                   <div className="min-w-0">

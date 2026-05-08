@@ -37,7 +37,7 @@ export function StatsStrip({ className }: { className?: string }) {
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
       className={cn(
-        "relative border-y border-white/[0.06] bg-[linear-gradient(180deg,oklch(1_0_0_/0.02),transparent)] py-10 sm:py-12",
+        "relative border-y border-white/6 bg-[linear-gradient(180deg,oklch(1_0_0_/0.02),transparent)] py-10 sm:py-12",
         className
       )}
     >
@@ -47,8 +47,8 @@ export function StatsStrip({ className }: { className?: string }) {
             key={s.label}
             variants={item}
             className={cn(
-              "text-center sm:border-white/[0.06] sm:px-6 sm:text-left lg:px-8",
-              i > 0 && i % 2 === 1 ? "max-sm:border-l max-sm:border-white/[0.06] max-sm:pl-4" : "",
+              "text-center sm:border-white/6 sm:px-6 sm:text-left lg:px-8",
+              i > 0 && i % 2 === 1 ? "max-sm:border-l max-sm:border-white/6 max-sm:pl-4" : "",
               i > 0 ? "sm:border-l" : ""
             )}
           >

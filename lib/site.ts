@@ -6,7 +6,7 @@ export const siteConfig = {
   birthDate: "27.05.1998",
   /** Город проживания */
   city: "Якутск",
-  /** Портрет для страницы «Обо мне» (`public/assets/photos/`) */
+  /** Портрет на главной странице профиля (`public/assets/photos/`) */
   portraitUrl: "/assets/photos/tatyana-tron.png",
   /** Подзаголовок в шапке под именем */
   title: "AI · Data Science · Fullstack",
@@ -40,8 +40,7 @@ export type NavItem = {
 }
 
 export const mainNav: NavItem[] = [
-  { href: "/", label: "Главная" },
-  { href: "/about", label: "Обо мне" },
+  { href: "/about", label: "Главная" },
   { href: "/projects", label: "Проекты" },
   { href: "/competitions", label: "Конкурсы" },
   { href: "/courses", label: "Курсы" },

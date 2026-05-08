@@ -8,13 +8,13 @@ const techBadgeVariants = cva(
     variants: {
       variant: {
         default:
-          "border-primary/25 bg-primary/[0.08] text-primary/95 hover:border-primary/40 hover:bg-primary/[0.12]",
+          "border-primary/25 bg-primary/8 text-primary/95 hover:border-primary/40 hover:bg-primary/12",
         subtle:
           "border-border/80 bg-surface/60 text-muted-foreground hover:border-primary/25 hover:text-foreground",
         outline:
           "border-border bg-transparent text-muted-foreground hover:border-accent-2/35 hover:text-foreground",
         glow:
-          "glow-border border-primary/20 bg-primary/[0.06] text-primary/90 shadow-glow-sm",
+          "glow-border border-primary/20 bg-primary/6 text-primary/90 shadow-glow-sm",
       },
     },
     defaultVariants: {

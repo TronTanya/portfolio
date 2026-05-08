@@ -237,7 +237,7 @@
   }
 
   .glass-panel {
-    @apply border border-white/[0.06] bg-[linear-gradient(145deg,oklch(1_0_0_/0.045),oklch(1_0_0_/0.012))] shadow-glass backdrop-blur-xl;
+    @apply border border-white/6 bg-[linear-gradient(145deg,oklch(1_0_0_/0.045),oklch(1_0_0_/0.012))] shadow-glass backdrop-blur-xl;
   }
 
   /** Карточки с лёгким подъёмом и акцентной кромкой (сочетайте с классом `glass-panel`). */
@@ -303,7 +303,7 @@
       0 0 72px -36px color-mix(in oklch, var(--accent-2) 12%, transparent);
   }
   .gradient-text {
-    @apply bg-gradient-to-br from-primary via-foreground/40 to-accent-2 bg-clip-text text-transparent;
+    @apply bg-linear-to-br from-primary via-foreground/40 to-accent-2 bg-clip-text text-transparent;
   }
   .muted-text {
     @apply text-muted-foreground leading-relaxed;

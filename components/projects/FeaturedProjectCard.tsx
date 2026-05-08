@@ -17,7 +17,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
   return (
     <article>
       <GlassCard className="overflow-hidden p-0 sm:p-0">
-        <div className="relative overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-primary/[0.08] via-transparent to-accent-2/[0.06] px-5 py-5 sm:px-8 sm:py-6">
+        <div className="relative overflow-hidden border-b border-white/6 bg-linear-to-br from-primary/8 via-transparent to-accent-2/6 px-5 py-5 sm:px-8 sm:py-6">
           {isGlass3DEnabled() && project.id === "drivee-analytics" ? (
             <div className="pointer-events-none absolute right-3 top-3 z-0 sm:right-5 sm:top-5">
               <DriveeFeaturedGlassDecor />
@@ -73,7 +73,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
                   {project.functions.map((f) => (
                     <li
                       key={f}
-                      className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-surface/40 px-2.5 py-1.5 text-xs text-foreground/90"
+                      className="flex items-center gap-2 rounded-lg border border-white/6 bg-surface/40 px-2.5 py-1.5 text-xs text-foreground/90"
                     >
                       <span className="size-1 shrink-0 rounded-full bg-primary/80" aria-hidden />
                       {f}

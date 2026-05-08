@@ -14,7 +14,7 @@ export function StatCard({ label, value, hint, className }: StatCardProps) {
   return (
     <div
       className={cn(
-        "glass-panel rounded-xl border-white/[0.06] px-4 py-4 sm:px-5 sm:py-5",
+        "glass-panel rounded-xl border-white/6 px-4 py-4 sm:px-5 sm:py-5",
         className
       )}
     >

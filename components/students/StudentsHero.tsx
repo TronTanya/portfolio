@@ -1,30 +1,38 @@
-import { GlassCard } from "@/components/ui/GlassCard"
-import {
-  studentsIntro,
-  studentsMainThought,
-  studentsPageTitle,
-} from "@/data/studentAchievements"
+import { studentsIntro, studentsPageTitle } from "@/data/studentAchievements"
+import { cn } from "@/lib/utils"
 
 export function StudentsHero() {
   return (
-    <header className="space-y-6">
-      <div>
-        <h1 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl">
-          {studentsPageTitle}
-        </h1>
-        <p className="muted-text mt-4 max-w-3xl text-pretty text-base leading-relaxed sm:text-lg">
+    <header className="relative">
+      <p className="section-eyebrow mb-0">Наставничество</p>
+      <h1
+        className={cn(
+          "hero-title-gradient mt-2 text-balance font-sans text-3xl font-semibold tracking-[-0.03em] sm:mt-3 sm:text-4xl sm:tracking-[-0.035em] lg:text-[2.5rem] lg:leading-[1.12]"
+        )}
+      >
+        {studentsPageTitle}
+      </h1>
+
+      <div
+        className={cn(
+          "relative mt-8 max-w-3xl overflow-hidden rounded-2xl border border-white/10",
+          "bg-linear-to-br from-surface/80 via-surface/45 to-surface/25",
+          "p-6 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.07),0_1px_0_0_oklch(1_0_0_/0.04)_inset]",
+          "backdrop-blur-xl sm:mt-10 sm:p-7"
+        )}
+      >
+        <div
+          className="pointer-events-none absolute -right-12 -top-14 size-44 rounded-full bg-primary/15 blur-3xl sm:size-52"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-16 -left-10 size-40 rounded-full bg-accent-2/10 blur-3xl sm:size-48"
+          aria-hidden
+        />
+        <p className="relative text-pretty text-base leading-[1.7] text-foreground/88 sm:text-lg sm:leading-[1.65]">
           {studentsIntro}
         </p>
       </div>
-
-      <GlassCard interactive={false} className="border-primary/15 bg-gradient-to-br from-primary/[0.06] via-transparent to-accent-2/[0.05] p-5 sm:p-6">
-        <p className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-primary/85">
-          Главная мысль
-        </p>
-        <p className="mt-3 text-base font-medium leading-relaxed text-foreground/95 sm:text-lg">
-          {studentsMainThought}
-        </p>
-      </GlassCard>
     </header>
   )
 }

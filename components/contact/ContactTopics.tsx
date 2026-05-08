@@ -3,7 +3,7 @@ import { GlassCard } from "@/components/ui/GlassCard"
 
 export function ContactTopics() {
   return (
-    <GlassCard interactive={false} className="border-white/[0.07] p-5 sm:p-6">
+    <GlassCard interactive={false} className="border-white/7 p-5 sm:p-6">
       <h2 className="text-lg font-semibold tracking-tight text-foreground">
         Можно обращаться по вопросам
       </h2>

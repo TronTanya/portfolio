@@ -55,7 +55,7 @@ export function HeroSection() {
           <motion.div custom={0} initial="hidden" animate="show" variants={fade}>
             <p className="mb-4 flex items-center gap-3 font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/90">
               <span
-                className="h-1 w-9 shrink-0 rounded-full bg-gradient-to-r from-primary to-accent-2 shadow-[0_0_12px_color-mix(in_oklch,var(--primary)_35%,transparent)]"
+                className="h-1 w-9 shrink-0 rounded-full bg-linear-to-r from-primary to-accent-2 shadow-[0_0_12px_color-mix(in_oklch,var(--primary)_35%,transparent)]"
                 aria-hidden
               />
               {siteConfig.name}
@@ -85,7 +85,7 @@ export function HeroSection() {
             variants={fade}
             className="mt-9 sm:mt-10"
           >
-            <div className="flex flex-col gap-3 rounded-2xl border border-white/[0.07] bg-[linear-gradient(135deg,oklch(1_0_0_/0.04),oklch(1_0_0_/0.01))] p-3 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.06)] backdrop-blur-md sm:inline-flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 sm:p-3.5">
+            <div className="flex flex-col gap-3 rounded-2xl border border-white/7 bg-[linear-gradient(135deg,oklch(1_0_0_/0.04),oklch(1_0_0_/0.01))] p-3 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.06)] backdrop-blur-md sm:inline-flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 sm:p-3.5">
               <GradientButton href="/projects" innerClassName="gap-2 px-6">
                 Смотреть проекты
                 <ArrowRight className="size-4 shrink-0" aria-hidden />
@@ -106,7 +106,7 @@ export function HeroSection() {
                 href="/contact"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "lg" }),
-                  "inline-flex w-full justify-center gap-2 text-muted-foreground hover:bg-white/[0.04] hover:text-foreground sm:w-auto"
+                  "inline-flex w-full justify-center gap-2 text-muted-foreground hover:bg-white/4 hover:text-foreground sm:w-auto"
                 )}
               >
                 <Mail className="size-4 shrink-0" aria-hidden />

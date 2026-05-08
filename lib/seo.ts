@@ -38,21 +38,3 @@ export function pageMetadata(opts: {
     },
   }
 }
-
-/** Главная: полный title без шаблона + тот же текст для OG. */
-export const homeMetadata: Metadata = {
-  title: { absolute: siteConfig.defaultTitle },
-  description: siteConfig.description,
-  alternates: { canonical: `${baseUrl()}/` },
-  openGraph: {
-    ...ogDefaults,
-    title: siteConfig.defaultTitle,
-    description: siteConfig.description,
-    url: `${baseUrl()}/`,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.defaultTitle,
-    description: siteConfig.description,
-  },
-}

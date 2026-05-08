@@ -44,7 +44,7 @@ export function ProjectsView() {
                   "rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors",
                   active
                     ? "border-primary/40 bg-primary/15 text-primary shadow-glow-sm"
-                    : "border-white/[0.08] bg-surface/30 text-muted-foreground hover:border-primary/25 hover:text-foreground"
+                    : "border-white/8 bg-surface/30 text-muted-foreground hover:border-primary/25 hover:text-foreground"
                 )}
               >
                 {tab.label}

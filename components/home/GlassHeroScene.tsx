@@ -28,11 +28,11 @@ function GlassPanel({ label, className }: { label: string; className?: string })
   return (
     <div
       className={cn(
-        "pointer-events-none absolute border border-white/[0.09] bg-[linear-gradient(155deg,oklch(1_0_0_/0.09),oklch(1_0_0_/0.02))] shadow-[0_12px_40px_-20px_oklch(0_0_0_/0.75),inset_0_1px_0_0_oklch(1_0_0_/0.06)] backdrop-blur-xl text-xs font-medium sm:text-sm",
+        "pointer-events-none absolute border border-white/9 bg-[linear-gradient(155deg,oklch(1_0_0_/0.09),oklch(1_0_0_/0.02))] shadow-[0_12px_40px_-20px_oklch(0_0_0_/0.75),inset_0_1px_0_0_oklch(1_0_0_/0.06)] backdrop-blur-xl text-xs font-medium sm:text-sm",
         className
       )}
     >
-      <span className="block bg-gradient-to-br from-foreground/95 via-foreground/80 to-muted-foreground bg-clip-text font-mono tracking-tight text-transparent">
+      <span className="block bg-linear-to-br from-foreground/95 via-foreground/80 to-muted-foreground bg-clip-text font-mono tracking-tight text-transparent">
         {label}
       </span>
     </div>
@@ -94,7 +94,7 @@ export function GlassHeroScene({ className }: { className?: string }) {
         }
       >
         <div
-          className="absolute inset-0 rounded-[2rem] border border-white/[0.05] bg-[radial-gradient(ellipse_at_30%_20%,color-mix(in_oklch,var(--primary)_12%,transparent),transparent_55%),radial-gradient(ellipse_at_80%_70%,color-mix(in_oklch,var(--accent-2)_10%,transparent),transparent_50%)] shadow-glass"
+          className="absolute inset-0 rounded-[2rem] border border-white/5 bg-[radial-gradient(ellipse_at_30%_20%,color-mix(in_oklch,var(--primary)_12%,transparent),transparent_55%),radial-gradient(ellipse_at_80%_70%,color-mix(in_oklch,var(--accent-2)_10%,transparent),transparent_50%)] shadow-glass"
           aria-hidden
         />
         <div
@@ -104,7 +104,7 @@ export function GlassHeroScene({ className }: { className?: string }) {
               "rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) rotateX(-4deg) rotateY(6deg)",
           }}
         >
-          <div className="absolute inset-0 skew-x-[-1deg] rounded-3xl border border-white/[0.04] bg-gradient-to-br from-white/[0.04] to-transparent opacity-80" />
+          <div className="absolute inset-0 skew-x-[-1deg] rounded-3xl border border-white/4 bg-linear-to-br from-white/4 to-transparent opacity-80" />
           {glassHeroPanels.map((p) => (
             <GlassPanel
               key={p.id}
@@ -124,7 +124,7 @@ export function GlassHeroScene({ className }: { className?: string }) {
           <div
             key={p.id}
             className={cn(
-              "rounded-xl border border-white/[0.08] bg-[linear-gradient(145deg,oklch(1_0_0_/0.07),oklch(1_0_0_/0.02))] px-3 py-2.5 text-center shadow-sm backdrop-blur-md",
+              "rounded-xl border border-white/8 bg-[linear-gradient(145deg,oklch(1_0_0_/0.07),oklch(1_0_0_/0.02))] px-3 py-2.5 text-center shadow-sm backdrop-blur-md",
               p.size === "lg" && "col-span-2 sm:col-span-1"
             )}
           >

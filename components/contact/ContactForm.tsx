@@ -7,7 +7,7 @@ import { GlassCard } from "@/components/ui/GlassCard"
 import { cn } from "@/lib/utils"
 
 const inputClass =
-  "w-full rounded-lg border border-white/[0.1] bg-surface/40 px-3 py-2.5 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/70 focus:border-primary/35 focus:ring-2 focus:ring-primary/20"
+  "w-full rounded-lg border border-white/10 bg-surface/40 px-3 py-2.5 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/70 focus:border-primary/35 focus:ring-2 focus:ring-primary/20"
 
 /**
  * Форма связи (сейчас только UI + клиентская валидация).
@@ -21,7 +21,7 @@ export function ContactForm() {
   const [sent, setSent] = useState(false)
 
   return (
-    <GlassCard interactive={false} className="border-white/[0.07] p-5 sm:p-6">
+    <GlassCard interactive={false} className="border-white/7 p-5 sm:p-6">
       <h2 className="text-lg font-semibold tracking-tight text-foreground">Сообщение</h2>
       <p className="muted-text mt-2 text-sm">
         Заполните поля — проверка на стороне браузера. Отправка на сервер пока не подключена.

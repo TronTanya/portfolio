@@ -1,19 +1,24 @@
 import type { Metadata } from "next"
-import { Users } from "lucide-react"
 
-import { MentorRoleCard } from "@/components/students/MentorRoleCard"
-import { StudentProcessTimeline } from "@/components/students/StudentProcessTimeline"
+import { DocumentShowcase } from "@/components/students/DocumentShowcase"
+import { StudentResultsShowcase } from "@/components/students/StudentResultsShowcase"
 import { StudentResultStats } from "@/components/students/StudentResultStats"
 import { StudentsHero } from "@/components/students/StudentsHero"
-import { mentorRoles, studentSkillsGained, whyMentoringMatters } from "@/data/studentAchievements"
-import { GlassCard } from "@/components/ui/GlassCard"
-import { TechBadge } from "@/components/ui/TechBadge"
+import {
+  abilympicsRegionalIvanovNeuralArtDiplomaThird,
+  abilympicsRegionalYurovDiplomaThird,
+  bigChallengesRegionalTsvetkovDiplomaSecond,
+  moyaProfessionItRegionalMeritocracyDiplomaThird,
+  forumCareerBridgeDiplomaFirst,
+  professionalsRegionalDiploma,
+  professionalsRegionalDiplomaThird,
+  studentResultsShowcase,
+} from "@/data/studentAchievements"
 import { pageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = pageMetadata({
   title: "Студенты и наставничество",
-  description:
-    "Наставничество и сопровождение: роль ментора, результаты студентов и этапы работы с командами.",
+  description: "Наставничество и сопровождение: результаты студентов и работа с командами.",
   path: "/students",
 })
 
@@ -22,69 +27,55 @@ export default function StudentsPage() {
     <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <StudentsHero />
 
-      <section className="mt-14 sm:mt-16">
-        <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.06] pb-4">
-          <div>
-            <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">Роль наставника</h2>
-            <p className="muted-text mt-2 max-w-2xl text-sm sm:text-base">
-              Сопровождение от выбора формата до рефлексии после мероприятия.
-            </p>
-          </div>
-          <span className="flex items-center gap-2 rounded-lg border border-white/[0.08] bg-surface/50 px-3 py-1.5 text-xs text-muted-foreground">
-            <Users className="size-3.5 text-primary/90" aria-hidden />
-            Ментор / куратор
-          </span>
+      <section className="relative mt-16 sm:mt-20">
+        <div
+          className="absolute -left-4 top-0 hidden h-24 w-px bg-linear-to-b from-primary/50 via-primary/15 to-transparent sm:block lg:-left-6"
+          aria-hidden
+        />
+        <div className="max-w-3xl">
+          <p className="section-eyebrow mb-0">Итоги</p>
+          <h2 className="mt-2 text-balance text-xl font-semibold tracking-[-0.02em] text-foreground sm:mt-3 sm:text-2xl lg:text-[1.65rem] lg:leading-snug">
+            Результаты студентов
+          </h2>
+          <p className="muted-text mt-4 max-w-prose text-pretty text-sm leading-relaxed sm:mt-5 sm:text-base">
+            Без выдуманных цифр: типы исходов и формулировки, которые подтверждаются опытом сопровождения.
+          </p>
         </div>
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-          {mentorRoles.map((item) => (
-            <li key={item.id}>
-              <MentorRoleCard item={item} />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-14 sm:mt-16">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">Результаты студентов</h2>
-        <p className="muted-text mt-2 max-w-2xl text-sm sm:text-base">
-          Без выдуманных цифр: типы исходов и формулировки, которые подтверждаются опытом сопровождения.
-        </p>
-        <div className="mt-8">
+        <div className="mt-10 sm:mt-12">
           <StudentResultStats />
         </div>
-      </section>
-
-      <section className="mt-14 sm:mt-16">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">Процесс со студентами</h2>
-        <p className="muted-text mt-2 max-w-2xl text-sm sm:text-base">
-          Этапы могут сдвигаться, но логика «договориться → подготовить → участвовать → осмыслить» сохраняется.
-        </p>
-        <div className="mt-8">
-          <StudentProcessTimeline />
-        </div>
-      </section>
-
-      <section className="mt-14 sm:mt-16">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">Навыки студентов</h2>
-        <p className="muted-text mt-2 max-w-2xl text-sm sm:text-base">
-          Компетенции через практику, а не только через лекции.
-        </p>
-        <ul className="mt-6 flex flex-wrap gap-2">
-          {studentSkillsGained.map((skill) => (
-            <li key={skill}>
-              <TechBadge variant="outline" className="border-white/12 normal-case tracking-normal">
-                {skill}
-              </TechBadge>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-14 sm:mt-16">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">Зачем это</h2>
-        <GlassCard interactive={false} className="mt-6 max-w-3xl border-white/[0.07] p-5 sm:p-6">
-          <p className="text-sm leading-relaxed text-foreground/95 sm:text-base">{whyMentoringMatters}</p>
-        </GlassCard>
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {studentResultsShowcase.title}
+        </h3>
+        <StudentResultsShowcase />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {forumCareerBridgeDiplomaFirst.title}
+        </h3>
+        <DocumentShowcase content={forumCareerBridgeDiplomaFirst} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {professionalsRegionalDiploma.title}
+        </h3>
+        <DocumentShowcase content={professionalsRegionalDiploma} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {professionalsRegionalDiplomaThird.title}
+        </h3>
+        <DocumentShowcase content={professionalsRegionalDiplomaThird} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {bigChallengesRegionalTsvetkovDiplomaSecond.title}
+        </h3>
+        <DocumentShowcase content={bigChallengesRegionalTsvetkovDiplomaSecond} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {abilympicsRegionalYurovDiplomaThird.title}
+        </h3>
+        <DocumentShowcase content={abilympicsRegionalYurovDiplomaThird} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {abilympicsRegionalIvanovNeuralArtDiplomaThird.title}
+        </h3>
+        <DocumentShowcase content={abilympicsRegionalIvanovNeuralArtDiplomaThird} />
+        <h3 className="mt-10 text-base font-semibold tracking-tight text-foreground sm:mt-12 sm:text-lg">
+          {moyaProfessionItRegionalMeritocracyDiplomaThird.title}
+        </h3>
+        <DocumentShowcase content={moyaProfessionItRegionalMeritocracyDiplomaThird} />
       </section>
     </div>
   )

@@ -16,11 +16,11 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative z-10 mt-auto border-t border-white/[0.06] bg-background/50 shadow-[0_-1px_0_0_oklch(1_0_0_/0.03)_inset] backdrop-blur-xl">
+    <footer className="relative z-10 mt-auto border-t border-white/6 bg-background/50 shadow-[0_-1px_0_0_oklch(1_0_0_/0.03)_inset] backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
         <div className="lg:col-span-4">
           <div className="flex items-start gap-3">
-            <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-black/35 ring-1 ring-white/[0.08]">
+            <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-black/35 ring-1 ring-white/8">
               <SiteLogo size={36} className="opacity-95" />
             </span>
             <div className="min-w-0">
@@ -35,7 +35,7 @@ export function Footer() {
                   href={href}
                   target={href.startsWith("mailto:") ? undefined : "_blank"}
                   rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                  className="flex size-9 items-center justify-center rounded-lg border border-white/[0.08] bg-surface/50 text-muted-foreground transition-colors duration-200 hover:border-primary/30 hover:text-primary hover:shadow-glow-sm"
+                  className="flex size-9 items-center justify-center rounded-lg border border-white/8 bg-surface/50 text-muted-foreground transition-colors duration-200 hover:border-primary/30 hover:text-primary hover:shadow-glow-sm"
                   aria-label={label}
                 >
                   <Icon className="size-4" aria-hidden />

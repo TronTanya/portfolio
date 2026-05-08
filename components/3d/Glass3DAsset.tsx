@@ -338,7 +338,7 @@ export function Glass3DAsset({
 function GlassSkeleton() {
   return (
     <div
-      className="pointer-events-none absolute inset-0 z-10 animate-pulse bg-gradient-to-br from-muted/55 via-muted/20 to-transparent motion-reduce:animate-none"
+      className="pointer-events-none absolute inset-0 z-10 animate-pulse bg-linear-to-br from-muted/55 via-muted/20 to-transparent motion-reduce:animate-none"
       aria-hidden
     />
   )
@@ -348,7 +348,7 @@ function GlassErrorFallback({ soft }: { soft: boolean }) {
   if (soft) {
     return (
       <div
-        className="absolute inset-0 z-[1] flex items-center justify-center bg-muted/20 text-center text-xs text-muted-foreground/80"
+        className="absolute inset-0 z-1 flex items-center justify-center bg-muted/20 text-center text-xs text-muted-foreground/80"
         aria-hidden
       >
         <span className="max-w-48 px-2" />
@@ -357,7 +357,7 @@ function GlassErrorFallback({ soft }: { soft: boolean }) {
   }
   return (
     <div
-      className="absolute inset-0 z-[1] flex items-center justify-center bg-muted/35 text-center text-xs text-muted-foreground"
+      className="absolute inset-0 z-1 flex items-center justify-center bg-muted/35 text-center text-xs text-muted-foreground"
       role="alert"
     >
       <span className="max-w-48 px-2">Не удалось загрузить медиа</span>

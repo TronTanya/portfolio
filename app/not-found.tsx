@@ -17,7 +17,7 @@ export default function NotFound() {
     <div className="relative mx-auto flex min-h-[min(70dvh,560px)] max-w-6xl flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
       <GlassCard
         interactive={false}
-        className="w-full max-w-md border-white/[0.08] p-8 text-center shadow-glass sm:p-10"
+        className="w-full max-w-md border-white/8 p-8 text-center shadow-glass sm:p-10"
       >
         <p className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-primary/90">404</p>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
@@ -27,7 +27,7 @@ export default function NotFound() {
           Ссылка устарела или адрес набран с ошибкой. Ниже — быстрый путь на главную и к проектам.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-          <Link href="/" className={cn(buttonVariants({ variant: "default", size: "lg" }), "w-full sm:w-auto")}>
+          <Link href="/about" className={cn(buttonVariants({ variant: "default", size: "lg" }), "w-full sm:w-auto")}>
             На главную
           </Link>
           <Link

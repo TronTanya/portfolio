@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils"
 
 export function EducationCard({ entry }: { entry: EducationEntry }) {
   return (
-    <GlassCard interactive={false} className="border-white/[0.07] p-5 sm:p-6">
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] pb-3">
+    <GlassCard interactive={false} className="border-white/7 p-5 sm:p-6">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/6 pb-3">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-foreground/80">
           {credentialTypeLabels[entry.type]}
         </span>
@@ -37,8 +37,8 @@ export function EducationCard({ entry }: { entry: EducationEntry }) {
               target="_blank"
               rel="noreferrer"
               className={cn(
-                "group relative shrink-0 overflow-hidden rounded-xl border border-white/[0.1] bg-muted/15 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.06)]",
-                "ring-1 ring-white/[0.06] transition-[box-shadow,opacity] hover:opacity-[0.96] hover:ring-primary/25",
+                "group relative shrink-0 overflow-hidden rounded-xl border border-white/10 bg-muted/15 shadow-[inset_0_1px_0_0_oklch(1_0_0_/0.06)]",
+                "ring-1 ring-white/6 transition-[box-shadow,opacity] hover:opacity-[0.96] hover:ring-primary/25",
                 "sm:max-w-[min(100%,17.5rem)]"
               )}
               aria-label={`Открыть PDF: ${entry.diplomaLabel ?? "диплом"}`}
@@ -52,7 +52,7 @@ export function EducationCard({ entry }: { entry: EducationEntry }) {
                 className="h-auto w-full object-cover object-top"
                 unoptimized={entry.diplomaImageUrl.endsWith(".png")}
               />
-              <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/85 to-transparent px-3 py-2 text-center text-[10px] font-medium text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 sm:text-[11px]">
+              <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-linear-to-t from-background/85 to-transparent px-3 py-2 text-center text-[10px] font-medium text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 sm:text-[11px]">
                 Открыть PDF
               </span>
             </a>
@@ -94,7 +94,7 @@ export function EducationCard({ entry }: { entry: EducationEntry }) {
         </ul>
       </div>
 
-      <div className="mt-5 border-t border-white/[0.06] pt-4">
+      <div className="mt-5 border-t border-white/6 pt-4">
         <p className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
           Навыки
         </p>

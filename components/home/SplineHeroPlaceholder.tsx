@@ -5,7 +5,7 @@ export function SplineHeroPlaceholder({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-white/[0.06] bg-surface/35 backdrop-blur-md",
+        "flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-white/6 bg-surface/35 backdrop-blur-md",
         className
       )}
       aria-hidden

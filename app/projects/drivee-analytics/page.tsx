@@ -30,7 +30,7 @@ export default function DriveeAnalyticsCasePage() {
         <FutureImprovements />
       </div>
 
-      <footer className="mt-16 border-t border-white/[0.06] pt-8 sm:mt-20">
+      <footer className="mt-16 border-t border-white/6 pt-8 sm:mt-20">
         <p className="text-center text-sm text-muted-foreground">
           Итог:{" "}
           <span className="text-foreground/90">

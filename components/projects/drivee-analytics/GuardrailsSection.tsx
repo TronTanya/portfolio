@@ -7,16 +7,16 @@ import { DriveeExplainabilityPreview } from "./DriveeExplainabilityPreview"
 import { DriveeGuardrailsShieldDecor } from "./DriveeGlassDecor"
 
 const guardrailCard =
-  "rounded-lg border border-white/[0.08] bg-black/30 px-4 py-3 shadow-none hover:translate-y-0 hover:border-white/[0.1] hover:shadow-none"
+  "rounded-lg border border-white/8 bg-black/30 px-4 py-3 shadow-none hover:translate-y-0 hover:border-white/10 hover:shadow-none"
 
 const explainCard =
-  "rounded-lg border border-white/[0.07] bg-white/[0.03] px-4 py-3 shadow-none hover:translate-y-0 hover:border-primary/15 hover:shadow-none"
+  "rounded-lg border border-white/7 bg-white/3 px-4 py-3 shadow-none hover:translate-y-0 hover:border-primary/15 hover:shadow-none"
 
 export function GuardrailsSection() {
   return (
     <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
-      <section className="rounded-2xl border border-white/[0.07] bg-gradient-to-b from-black/35 to-transparent p-5 sm:p-6">
-        <div className="flex items-start justify-between gap-4 border-b border-white/[0.08] pb-4">
+      <section className="rounded-2xl border border-white/7 bg-linear-to-b from-black/35 to-transparent p-5 sm:p-6">
+        <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
           <div className="min-w-0 border-l-2 border-accent-2/60 pl-4">
             <h2 className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent-2/95">
               Безопасность и guardrails

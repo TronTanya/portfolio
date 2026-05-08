@@ -4,7 +4,7 @@ import { CompetitionCard } from "./CompetitionCard"
 
 export function CompetitionTimeline({ items }: { items: CompetitionEntry[] }) {
   return (
-    <ol className="relative max-w-3xl border-l border-white/[0.08] pl-6 sm:pl-8">
+    <ol className="relative w-full max-w-6xl border-l border-white/8 pl-6 sm:pl-8">
       {items.map((entry, index) => (
         <li key={entry.id} className="relative pb-10 last:pb-0">
           <span

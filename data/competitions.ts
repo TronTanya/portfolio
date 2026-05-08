@@ -16,6 +16,13 @@ export type CompetitionEntry = {
   note?: string
   /** Карточка-плейсхолдер под будущие события */
   placeholder?: boolean
+  /** Скан диплома справа в той же карточке (вкладка «Конкурсы») */
+  diplomaScan?: {
+    pdfUrl: string
+    imageUrl: string
+    imageAlt: string
+    downloadLabel?: string
+  }
 }
 
 export const competitionsIntro =
@@ -24,12 +31,12 @@ export const competitionsIntro =
 export const competitions: CompetitionEntry[] = [
   {
     id: "moya-professiya-it",
-    year: "год уточняется",
+    year: "2025–2026",
     title: "Всероссийский конкурс «Моя профессия — ИТ»",
-    track: "Специалисты",
-    project: "Drivee Analytics Notebook",
-    result: "Финал / топ-10",
-    resultTone: "highlight",
+    track: "Специалисты · региональный конкурс",
+    project: "Meritocracy",
+    result: "III место — региональный конкурс, финал этапа",
+    resultTone: "success",
     role: "Разработчик, AI/Data specialist, участник защиты",
     skills: [
       "AI",
@@ -47,57 +54,36 @@ export const competitions: CompetitionEntry[] = [
       "Готовить демо",
       "Отвечать на вопросы жюри",
     ],
+    diplomaScan: {
+      pdfUrl: "/documents/tron-moya-professiya-it-regional-2026.pdf",
+      imageUrl: "/assets/competitions/tron-moya-professiya-it-regional-2026-preview.png",
+      imageAlt:
+        "Диплом III места — региональный конкурс «Моя профессия — ИТ», финал этапа, Тронь Татьяна Александровна, проект Meritocracy",
+      downloadLabel: "Скачать PDF диплома",
+    },
   },
   {
-    id: "regional-it",
-    year: "год уточняется",
-    title: "Региональный IT-конкурс / хакатон",
-    result: "3 место",
-    resultTone: "success",
-    role: "Участник, разработчик, презентатор",
-    note: "Командный формат: продукт, сроки и защита перед жюри.",
+    id: "ai-vector-rudn-2026",
+    year: "2026",
+    title: "Международный конкурс креатива «AI-Вектор»",
+    track:
+      "Номинация «Нейроплакаты» · XX Всероссийская научно-практическая конференция с международным участием «Рекламный вектор-2026: диалог трендов» (РУДН, Москва)",
+    result: "Специальный приз · победа в онлайн-голосовании",
+    resultTone: "highlight",
+    role: "Участник конкурса",
+    skills: ["Генеративный AI", "Визуальный креатив", "Нейроплакат", "Презентация идеи"],
+    learnings: [
+      "Совмещать креатив и ИИ в формате конкурсной работы",
+      "Работать с критериями жюри и публичным голосованием",
+      "Упаковывать концепт для международной площадки",
+    ],
+    note: "Проводится в рамках конференции при кафедре рекламы и бизнес-коммуникаций ИМЭБ РУДН.",
+    diplomaScan: {
+      pdfUrl: "/documents/tron-ai-vector-rudn-2026.pdf",
+      imageUrl: "/assets/competitions/tron-ai-vector-rudn-2026-preview.png",
+      imageAlt:
+        "Диплом специального приза — конкурс «AI-Вектор», номинация «Нейроплакаты», РУДН, Москва, 2026",
+      downloadLabel: "Скачать PDF диплома",
+    },
   },
-  {
-    id: "ai-hackathon-future",
-    year: "год уточняется",
-    title: "AI hackathon",
-    result: "В планах",
-    resultTone: "muted",
-    placeholder: true,
-    note: "Заготовка под будущее участие: идея, стек и демо за ограниченное время.",
-  },
-  {
-    id: "ds-competition-future",
-    year: "год уточняется",
-    title: "Data Science competition",
-    result: "В планах",
-    resultTone: "muted",
-    placeholder: true,
-    note: "Соревнование по данным: постановка задачи, метрики и сильный постанализ.",
-  },
-  {
-    id: "edtech-competition-future",
-    year: "год уточняется",
-    title: "EdTech competition",
-    result: "В планах",
-    resultTone: "muted",
-    placeholder: true,
-    note: "Фокус на образовательном продукте и измеримом эффекте для пользователя.",
-  },
-]
-
-export const whatCompetitionsGive = [
-  "Практика работы в жёстких сроках без «бесконечной доработки».",
-  "Проверка идеи на реальных критериях жюри и пользовательской ценности.",
-  "Опыт презентации: структура, демо, ответы на вопросы под давлением.",
-  "Сетевой эффект: обмен практиками с командами и менторами.",
-  "Портфельный кейс, который понятен и HR, и тимлиду.",
-]
-
-export const hackathonSkills = [
-  "Декомпозиция задачи и приоритизация backlog на коротком горизонте.",
-  "Сборка сквозного демо: данные, API, UI, сценарий показа.",
-  "Коммуникация в команде и синхронизация перед дедлайном.",
-  "Работа с неопределённостью: урезание scope без потери смысла.",
-  "Публичная защита решения и аргументация технических решений.",
 ]

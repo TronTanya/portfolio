@@ -126,7 +126,7 @@ export function HeroGlassCollage({ className }: { className?: string }) {
               <div
                 key={d.id}
                 className={cn(
-                  "floating-3d asset-glow absolute z-[1] drop-shadow-[0_0_28px_color-mix(in_oklch,var(--primary)_22%,transparent)]",
+                  "floating-3d asset-glow absolute z-1 drop-shadow-[0_0_28px_color-mix(in_oklch,var(--primary)_22%,transparent)]",
                   positions[i]
                 )}
               >
@@ -144,7 +144,7 @@ export function HeroGlassCollage({ className }: { className?: string }) {
           })
         : null}
 
-      <div className="asset-mask relative z-[2] mx-auto w-[min(100%,28rem)] lg:mr-0 lg:ml-auto lg:w-[min(100%,32rem)]">
+      <div className="asset-mask relative z-2 mx-auto w-[min(100%,28rem)] lg:mr-0 lg:ml-auto lg:w-[min(100%,32rem)]">
         <div
           className="asset-glow drop-shadow-[0_0_48px_color-mix(in_oklch,var(--primary)_26%,transparent)] drop-shadow-[0_0_96px_color-mix(in_oklch,var(--accent-2)_14%,transparent)]"
           aria-hidden

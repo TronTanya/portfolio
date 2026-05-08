@@ -37,7 +37,7 @@ export function ProjectHero() {
       </div>
 
       <GlassCard className="relative overflow-hidden p-0">
-        <div className="border-b border-white/[0.06] bg-gradient-to-br from-primary/[0.08] via-transparent to-accent-2/[0.06] px-5 py-8 sm:px-8 sm:py-10">
+        <div className="border-b border-white/6 bg-linear-to-br from-primary/8 via-transparent to-accent-2/6 px-5 py-8 sm:px-8 sm:py-10">
           <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
             <div className="relative z-10 min-w-0">
               <div className="flex flex-wrap items-center gap-2">
@@ -75,7 +75,7 @@ export function ProjectHero() {
               </div>
             </div>
 
-            <div className="relative z-[1] hidden min-w-0 flex-col items-end gap-4 lg:flex">
+            <div className="relative z-1 hidden min-w-0 flex-col items-end gap-4 lg:flex">
               <div className="flex max-w-[13rem] flex-wrap justify-end gap-2">
                 <TechBadge variant="outline" className="normal-case tracking-normal">
                   AI / Data

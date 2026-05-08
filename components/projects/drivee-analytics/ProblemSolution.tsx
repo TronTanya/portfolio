@@ -30,7 +30,7 @@ export function ProblemSolution() {
         <p className="muted-text mt-2 max-w-2xl text-sm">
           Один сквозной поток от вопроса до объяснения — без ручного SQL со стороны пользователя.
         </p>
-        <ol className="relative mt-6 max-w-3xl border-l border-white/[0.08] pl-6 sm:pl-8">
+        <ol className="relative mt-6 max-w-3xl border-l border-white/8 pl-6 sm:pl-8">
           {driveeCase.endToEndSteps.map((step, i) => (
             <li key={i} className="relative pb-6 last:pb-0">
               <span

@@ -15,7 +15,7 @@ const navLinkClass =
   "transition-colors duration-200 ease-out text-muted-foreground hover:text-foreground"
 
 const navLinkActiveClass =
-  "bg-primary/[0.12] text-foreground shadow-[inset_0_0_0_1px] shadow-primary/25"
+  "bg-primary/12 text-foreground shadow-[inset_0_0_0_1px] shadow-primary/25"
 
 export function Header() {
   const pathname = usePathname()
@@ -30,14 +30,13 @@ export function Header() {
     }
   }, [open])
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`)
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-background/70 shadow-[0_1px_0_0_oklch(1_0_0_/0.05)_inset] backdrop-blur-2xl supports-[backdrop-filter]:bg-background/50">
+    <header className="sticky top-0 z-50 border-b border-white/8 bg-background/70 shadow-[0_1px_0_0_oklch(1_0_0_/0.05)_inset] backdrop-blur-2xl supports-[backdrop-filter]:bg-background/50">
       <div className="relative z-50 mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <Link
-          href="/"
+          href="/about"
           className="group flex min-w-0 shrink-0 items-center gap-2 rounded-lg font-semibold tracking-tight text-foreground outline-offset-2 transition-opacity duration-200 hover:opacity-95"
           aria-label={`${siteConfig.name} — на главную`}
         >
@@ -79,7 +78,7 @@ export function Header() {
             download={siteConfig.resumeDownloadFilename}
             className={cn(
               buttonVariants({ variant: "outline", size: "sm" }),
-              "hidden gap-1.5 border-white/[0.1] bg-surface/30 transition-colors duration-200 sm:inline-flex"
+              "hidden gap-1.5 border-white/10 bg-surface/30 transition-colors duration-200 sm:inline-flex"
             )}
             aria-label="Скачать резюме в PDF"
           >
@@ -127,7 +126,7 @@ export function Header() {
             />
             <motion.nav
               id="mobile-nav"
-              className="absolute left-0 right-0 top-full z-40 border-b border-white/[0.06] bg-background/92 px-4 py-3 shadow-glass backdrop-blur-2xl md:hidden"
+              className="absolute left-0 right-0 top-full z-40 border-b border-white/6 bg-background/92 px-4 py-3 shadow-glass backdrop-blur-2xl md:hidden"
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
@@ -156,7 +155,7 @@ export function Header() {
                     </li>
                   )
                 })}
-                <li className="mt-2 flex flex-col gap-2 border-t border-white/[0.06] pt-3 sm:flex-row">
+                <li className="mt-2 flex flex-col gap-2 border-t border-white/6 pt-3 sm:flex-row">
                   <a
                     href={siteConfig.resumeUrl}
                     download={siteConfig.resumeDownloadFilename}

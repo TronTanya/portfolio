@@ -60,7 +60,7 @@ export function CourseCard({ course }: { course: Course }) {
         </div>
 
         {course.certificateUrl ? (
-          <div className="mt-5 border-t border-white/[0.06] pt-4">
+          <div className="mt-5 border-t border-white/6 pt-4">
             <a
               href={course.certificateUrl}
               target="_blank"

@@ -162,7 +162,10 @@ export async function buildResumePdf(): Promise<Uint8Array> {
 
   const higherEdu = educationSections.find((s) => s.id === "higher")?.entries[0]
   const mainEdu = educationSections.find((s) => s.id === "main")?.entries[0]
-  if (higherEdu || mainEdu) {
+  const additionalWithDocs =
+    educationSections.find((s) => s.id === "additional")?.entries.filter((e) => e.diplomaPdfUrl) ?? []
+
+  if (higherEdu || mainEdu || additionalWithDocs.length > 0) {
     drawHeading("Образование")
     if (higherEdu) {
       drawLine("Высшее образование", FONT_SIZE_SECTION)
@@ -174,6 +177,15 @@ export async function buildResumePdf(): Promise<Uint8Array> {
       drawLine("Среднее профессиональное образование", FONT_SIZE_SECTION)
       y -= 2
       drawParagraph(formatEducationForPdf(mainEdu, siteConfig.url))
+      y -= 4
+    }
+    if (additionalWithDocs.length > 0) {
+      drawLine("Дополнительное образование", FONT_SIZE_SECTION)
+      y -= 2
+      for (const entry of additionalWithDocs) {
+        drawParagraph(formatEducationForPdf(entry, siteConfig.url))
+        y -= 4
+      }
     }
   }
 

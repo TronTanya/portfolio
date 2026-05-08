@@ -11,14 +11,14 @@ type EducationSectionProps = {
 export function EducationSection({ title, subtitle, entries }: EducationSectionProps) {
   return (
     <section className="scroll-mt-8">
-      <div className="border-b border-white/[0.06] pb-4">
+      <div className="border-b border-white/6 pb-4">
         <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">{title}</h2>
         {subtitle ? (
           <p className="muted-text mt-2 max-w-3xl text-sm sm:text-base">{subtitle}</p>
         ) : null}
       </div>
 
-      <ol className="relative mt-6 max-w-4xl border-l border-white/[0.08] pl-6 sm:mt-8 sm:pl-8">
+      <ol className="relative mt-6 max-w-4xl border-l border-white/8 pl-6 sm:mt-8 sm:pl-8">
         {entries.map((entry, index) => (
           <li key={entry.id} className="relative pb-10 last:pb-0">
             <span

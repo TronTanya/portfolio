@@ -13,7 +13,7 @@ export function LearningRoadmap() {
         сопоставить с фазами и закрывать пробелы целенаправленно.
       </p>
 
-      <ol className="relative mt-8 max-w-4xl border-l border-white/[0.08] pl-6 sm:pl-8">
+      <ol className="relative mt-8 max-w-4xl border-l border-white/8 pl-6 sm:pl-8">
         {learningRoadmapPhases.map((phase, index) => (
           <li key={phase.id} className="relative pb-10 last:pb-0">
             <span

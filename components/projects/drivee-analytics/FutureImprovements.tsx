@@ -14,7 +14,7 @@ export function FutureImprovements() {
         {driveeCase.future.map((item, i) => (
           <li key={item}>
             <GlassCard interactive={false} className="flex h-full gap-3 p-4 sm:p-4">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-md border border-white/[0.08] bg-surface/80 font-mono text-xs font-semibold text-primary">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-md border border-white/8 bg-surface/80 font-mono text-xs font-semibold text-primary">
                 {i + 1}
               </span>
               <p className="text-sm leading-relaxed text-foreground/95">{item}</p>
